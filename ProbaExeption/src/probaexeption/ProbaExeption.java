@@ -48,5 +48,13 @@ public class ProbaExeption {
         } finally {
             System.out.println("Este bloque se ejecuta siempre.");
         }
+
+        datos d = new datos();
+        try {
+            d.validarEdad(6);
+        } catch (MiExcepcion e) {
+            System.out.println(e.getMessage());
+        }
     }
+
 }

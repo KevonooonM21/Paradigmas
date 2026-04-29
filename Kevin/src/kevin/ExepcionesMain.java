@@ -78,24 +78,28 @@ public class ExepcionesMain {
 
         // 11.- IllegalStateException
         try {
-            objeto.verificarEstado(false); // ← corregido
+            objeto.verificarEstado(false);
         } catch (IllegalStateException e) {
             System.out.println("Error: " + e.getMessage());
         }
 
         // 12.- NumberFormatException
-        objeto.convertirNumero("abc"); // ← ya se maneja dentro del método
+        try {
+            objeto.convertirNumero("abc");
+        } catch (NumberFormatException e) {
+            System.out.println("Error: formato inválido");
+        }
 
         // 13.- ClassNotFoundException
         try {
-            objeto.cargarClase(); // ← corregido
+            objeto.cargarClase();
         } catch (ClassNotFoundException e) {
             System.out.println("Error: clase no encontrada");
         }   
 
         // 14.- NoSuchMethodException
         try {
-            objeto.invocarMetodo(); // ← corregido
+            objeto.invocarMetodo();
         } catch (NoSuchMethodException e) {
             System.out.println("Error: método no encontrado");
         }

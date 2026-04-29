@@ -42,7 +42,7 @@ public class Implementacion {
 
     // 6.- InterruptedException
     public void esperar() throws InterruptedException {
-        Thread.currentThread().interrupt(); // forzamos interrupción
+        Thread.currentThread().interrupt();
         Thread.sleep(2000);
     }
 
@@ -54,7 +54,7 @@ public class Implementacion {
     // 8.- OutOfMemoryError
     public void consumirMemoria() {
         try {
-            int[] arreglo = new int[Integer.MAX_VALUE]; // fuerza memoria
+            int[] arreglo = new int[Integer.MAX_VALUE];
         } catch (OutOfMemoryError e) {
             System.out.println("Error: La JVM se quedó sin memoria");
         }

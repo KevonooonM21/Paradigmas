@@ -3,7 +3,7 @@ package biblioteca;
 public class Libro extends Material {
     private int numpaginas;
 
-    // Constructor correcto
+    // Constructor
     public Libro(String titulo, String autor, int anioPublicacion, int numpaginas) 
             throws DatoInvalidoException {
         super(titulo, autor, anioPublicacion);
@@ -19,11 +19,11 @@ public class Libro extends Material {
         this.numpaginas = numpaginas;
     }
 
-    // Método prestar correcto
+    // Metodo
     @Override
     public void prestar() throws MaterialNoDisponibleException {
         if (isPrestado()) {
-            throw new MaterialNoDisponibleException("El libro ya está prestado");
+            throw new MaterialNoDisponibleException("El libro ya esta prestado");
         }
         setPrestado(true);
         System.out.println("Libro prestado correctamente");

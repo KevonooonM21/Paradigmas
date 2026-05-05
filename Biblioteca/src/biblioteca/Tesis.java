@@ -3,7 +3,7 @@ package biblioteca;
 public class Tesis extends Material {
     private String universidad;
 
-    // Constructor correcto
+    // Constructor
     public Tesis(String titulo, String autor, int anioPublicacion, String universidad) 
             throws DatoInvalidoException {
         super(titulo, autor, anioPublicacion);
@@ -19,11 +19,11 @@ public class Tesis extends Material {
         this.universidad = universidad;
     }
 
-    // Método prestar correcto
+    // Metodo prestar correcto
     @Override
     public void prestar() throws MaterialNoDisponibleException {
         if (isPrestado()) {
-            throw new MaterialNoDisponibleException("La tesis ya está prestada");
+            throw new MaterialNoDisponibleException("La tesis ya esta prestada");
         }
         setPrestado(true);
         System.out.println("Tesis prestada correctamente");

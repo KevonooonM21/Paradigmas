@@ -3,7 +3,7 @@ package biblioteca;
 public class Revista extends Material {
     private int numedicion;
 
-    // Constructor correcto
+    // Constructor
     public Revista(String titulo, String autor, int anioPublicacion, int numedicion) 
             throws DatoInvalidoException {
         super(titulo, autor, anioPublicacion);
@@ -19,11 +19,11 @@ public class Revista extends Material {
         this.numedicion = numedicion;
     }
 
-    // Método prestar correcto
+    // Metodo prestar correcto
     @Override
     public void prestar() throws MaterialNoDisponibleException {
         if (isPrestado()) {
-            throw new MaterialNoDisponibleException("La revista ya está prestada");
+            throw new MaterialNoDisponibleException("La revista ya esta prestada");
         }
         setPrestado(true);
         System.out.println("Revista prestada correctamente");

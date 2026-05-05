@@ -9,7 +9,7 @@ public abstract class Material {
     // Constructor
     public Material(String titulo, String autor, int anioPublicacion) throws DatoInvalidoException {
         if (anioPublicacion < 0 || anioPublicacion > 2026) {
-            throw new DatoInvalidoException("El año de publicación no es válido");
+            throw new DatoInvalidoException("El año de publicacion no es valido");
         }
 
         this.titulo = titulo;
@@ -39,6 +39,6 @@ public abstract class Material {
         this.prestado = prestado;
     }
 
-    // Método abstracto con excepción
+    // Metodo 
     public abstract void prestar() throws MaterialNoDisponibleException;
 }
